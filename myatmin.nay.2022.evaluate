@@ -1,0 +1,197 @@
+Hugging Face token loaded
+OpenAI API key loaded
+_settings.py loaded. DATA_FOLDER=/common/home/users/m/myatmin.nay.2022/eigenscore/data/datasets
+Using OPENAI_API_KEY environment variable.
+Loading model Llama-2-7b-chat-hf...
+Attempting to load meta-llama/Llama-2-7b-chat-hf directly from HuggingFace Hub...
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:26<00:26, 26.66s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:35<00:00, 15.90s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:35<00:00, 17.51s/it]
+Successfully loaded Llama-2-7b-chat-hf from HuggingFace Hub
+
+==================================================
+Evaluating dataset: SQuAD
+==================================================
+
+Results will be saved to: results/Llama-2-7b-chat-hf/result_SQuAD.txt
+Loading dataset SQuAD...
+SQuAD dataset processed and filtered to include only answerable questions. Total: 5928 examples
+Saving the dataset (0/1 shards):   0%|          | 0/5928 [00:00<?, ? examples/s]Saving the dataset (1/1 shards): 100%|██████████| 5928/5928 [00:00<00:00, 554501.21 examples/s]Saving the dataset (1/1 shards): 100%|██████████| 5928/5928 [00:00<00:00, 547420.39 examples/s]
+SQuAD dataset processed and saved to /common/home/users/m/myatmin.nay.2022/eigenscore/data/datasets/squad_dataset
+Map:   0%|          | 0/5928 [00:00<?, ? examples/s]Map:  17%|█▋        | 1000/5928 [00:00<00:01, 4260.61 examples/s]Map:  34%|███▎      | 2000/5928 [00:00<00:00, 5434.69 examples/s]Map:  51%|█████     | 3000/5928 [00:00<00:00, 6345.23 examples/s]Map:  67%|██████▋   | 4000/5928 [00:00<00:00, 6754.31 examples/s]Map:  84%|████████▍ | 5000/5928 [00:00<00:00, 7264.70 examples/s]Map: 100%|██████████| 5928/5928 [00:00<00:00, 7444.92 examples/s]Map: 100%|██████████| 5928/5928 [00:00<00:00, 6679.03 examples/s]
+Using 0.1% of the dataset...
+Generating answers...
+  0%|          | 0/5 [00:00<?, ?it/s] 20%|██        | 1/5 [00:04<00:16,  4.25s/it] 40%|████      | 2/5 [00:06<00:08,  2.92s/it] 60%|██████    | 3/5 [00:10<00:06,  3.46s/it] 80%|████████  | 4/5 [00:12<00:03,  3.13s/it]100%|██████████| 5/5 [00:14<00:00,  2.71s/it]100%|██████████| 5/5 [00:14<00:00,  2.99s/it]
+SQuAD answers format: <class 'dict'>
+SQuAD answers content: {'answer_start': tensor([74]), 'text': ['Latin']}
+Ground truth extracted: Latin
+Evaluating example 1 with GPT-4o-mini...
+
+API Response Status: 200
+Raw API Response Content:
+{
+  "scores": {
+    "relevance": 10,
+    "accuracy": 10,
+    "completeness": 9,
+    "overall": 10
+  },
+  "explanation": "The generated answer is highly relevant as it directly addresses the origin of the word 'imperialism'. It is factually accurate, correctly identifying Latin as the source language and providing additional context about the Latin word 'imperium'. The answer is mostly complete, though it could be slightly improved by omitting the phrase 'the Latin language' since 'Latin' alone suffices."
+}
+
+
+================================================================================
+Example 1
+--------------------------------------------------------------------------------
+Question: The word imperialism has it's origins in which ancient language? 
+Ground Truth Answer: Latin
+Generated Answer: The word imperialism has it's origins in the Latin language. The Latin word "imperium" means to rule over large territories.
+--------------------------------------------------------------------------------
+GPT-4o-mini Evaluation:
+Relevance: 10.0/10
+Accuracy: 10.0/10
+Completeness: 9.0/10
+Overall: 10.0/10
+Explanation: The generated answer is highly relevant as it directly addresses the origin of the word 'imperialism'. It is factually accurate, correctly identifying Latin as the source language and providing additional context about the Latin word 'imperium'. The answer is mostly complete, though it could be slightly improved by omitting the phrase 'the Latin language' since 'Latin' alone suffices.
+================================================================================
+SQuAD answers format: <class 'dict'>
+SQuAD answers content: {'answer_start': tensor([323]), 'text': ['dragonnades']}
+Ground truth extracted: dragonnades
+Evaluating example 2 with GPT-4o-mini...
+
+API Response Status: 200
+Raw API Response Content:
+{
+  "scores": {
+    "relevance": 10,
+    "accuracy": 10,
+    "completeness": 10,
+    "overall": 10
+  },
+  "explanation": "The generated answer 'Dragonnades' is highly relevant, factually accurate, and complete as it directly matches the ground truth answer with correct capitalization."
+}
+
+
+================================================================================
+Example 2
+--------------------------------------------------------------------------------
+Question: The practice of occupying and looting Huguenot homes was called?
+Ground Truth Answer: dragonnades
+Generated Answer: Dragonnades.
+--------------------------------------------------------------------------------
+GPT-4o-mini Evaluation:
+Relevance: 10.0/10
+Accuracy: 10.0/10
+Completeness: 10.0/10
+Overall: 10.0/10
+Explanation: The generated answer 'Dragonnades' is highly relevant, factually accurate, and complete as it directly matches the ground truth answer with correct capitalization.
+================================================================================
+SQuAD answers format: <class 'dict'>
+SQuAD answers content: {'answer_start': tensor([406]), 'text': ['often damaging']}
+Ground truth extracted: often damaging
+Evaluating example 3 with GPT-4o-mini...
+
+API Response Status: 200
+Raw API Response Content:
+{
+  "scores": {
+    "relevance": 10,
+    "accuracy": 10,
+    "completeness": 9,
+    "overall": 10
+  },
+  "explanation": "The generated answer is highly relevant as it directly addresses the question about the UK Parliament's description of a subscription to BSkyB. It accurately reflects the ground truth answer and provides additional context by mentioning the comparison to alcohol, tobacco, and gambling, which enhances understanding. The only minor point is that it could be slightly more concise, but overall, it effectively conveys the necessary information."
+}
+
+
+================================================================================
+Example 3
+--------------------------------------------------------------------------------
+Question: what did the UK parliment hear that a subscription to BSkyB was?
+Ground Truth Answer: often damaging
+Generated Answer: According to the passage, a subscription to BSkyB was described as "often damaging" along with alcohol, tobacco, and gambling.
+--------------------------------------------------------------------------------
+GPT-4o-mini Evaluation:
+Relevance: 10.0/10
+Accuracy: 10.0/10
+Completeness: 9.0/10
+Overall: 10.0/10
+Explanation: The generated answer is highly relevant as it directly addresses the question about the UK Parliament's description of a subscription to BSkyB. It accurately reflects the ground truth answer and provides additional context by mentioning the comparison to alcohol, tobacco, and gambling, which enhances understanding. The only minor point is that it could be slightly more concise, but overall, it effectively conveys the necessary information.
+================================================================================
+SQuAD answers format: <class 'dict'>
+SQuAD answers content: {'answer_start': tensor([420]), 'text': ['Timucua']}
+Ground truth extracted: Timucua
+Evaluating example 4 with GPT-4o-mini...
+
+API Response Status: 200
+Raw API Response Content:
+{
+  "scores": {
+    "relevance": 10,
+    "accuracy": 10,
+    "completeness": 9,
+    "overall": 10
+  },
+  "explanation": "The generated answer is highly relevant as it directly addresses the question about the civilization to which the pottery belongs. It is factually accurate, identifying the Timucua people correctly. The answer is mostly complete, providing additional context about the Mocama subgroup, but this detail is not strictly necessary to answer the question."
+}
+
+
+================================================================================
+Example 4
+--------------------------------------------------------------------------------
+Question: What civilization did the pottery belong to?
+Ground Truth Answer: Timucua
+Generated Answer: The pottery discovered on Black Hammock Island belongs to the Timucua people, specifically the Mocama subgroup.
+--------------------------------------------------------------------------------
+GPT-4o-mini Evaluation:
+Relevance: 10.0/10
+Accuracy: 10.0/10
+Completeness: 9.0/10
+Overall: 10.0/10
+Explanation: The generated answer is highly relevant as it directly addresses the question about the civilization to which the pottery belongs. It is factually accurate, identifying the Timucua people correctly. The answer is mostly complete, providing additional context about the Mocama subgroup, but this detail is not strictly necessary to answer the question.
+================================================================================
+SQuAD answers format: <class 'dict'>
+SQuAD answers content: {'answer_start': tensor([129]), 'text': ['ITV']}
+Ground truth extracted: ITV
+Evaluating example 5 with GPT-4o-mini...
+
+API Response Status: 200
+Raw API Response Content:
+{
+  "scores": {
+    "relevance": 10,
+    "accuracy": 9,
+    "completeness": 9,
+    "overall": 9
+  },
+  "explanation": "The generated answer is highly relevant as it directly addresses the question about the rights holders for the Premier League. It is mostly accurate, but there is a minor spelling error in 'Primer League' instead of 'Premier League'. The answer is complete as it provides the necessary information without omitting any details."
+}
+
+
+================================================================================
+Example 5
+--------------------------------------------------------------------------------
+Question: Who were the current rights holders for the Primer League?
+Ground Truth Answer: ITV
+Generated Answer: ITV were the current rights holders for the Premier League.
+--------------------------------------------------------------------------------
+GPT-4o-mini Evaluation:
+Relevance: 10.0/10
+Accuracy: 9.0/10
+Completeness: 9.0/10
+Overall: 9.0/10
+Explanation: The generated answer is highly relevant as it directly addresses the question about the rights holders for the Premier League. It is mostly accurate, but there is a minor spelling error in 'Primer League' instead of 'Premier League'. The answer is complete as it provides the necessary information without omitting any details.
+================================================================================
+
+================================================================================
+Overall GPT-4o-mini Evaluation:
+Total evaluated examples: 5
+Average Relevance: 10.00/10
+Average Accuracy: 9.80/10
+Average Completeness: 9.20/10
+Average Overall Score: 9.80/10
+================================================================================
+Results written to results/Llama-2-7b-chat-hf/result_SQuAD.txt
+
+================================================================================
+Evaluation complete for Llama-2-7b-chat-hf on 1 datasets:
+  1. SQuAD - Results saved to: results/Llama-2-7b-chat-hf/result_SQuAD.txt
+================================================================================

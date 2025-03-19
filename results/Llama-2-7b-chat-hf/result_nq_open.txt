@@ -1,0 +1,51 @@
+Example 1
+Question: who came first second and third on the grand national
+Ground Truth Answer: Pleasant Company
+Generated Answer: Tiger Roll, Native River, and Might Bite
+
+
+GPT-4o-mini Evaluation:
+Relevance: 8.0/10
+Accuracy: 2.0/10
+Completeness: 5.0/10
+Overall: 3.0/10
+Explanation: The generated answer provides names of horses that are not the correct first, second, and third place finishers for the Grand National, making it factually inaccurate. However, it is somewhat relevant as it lists names of horses related to the event. The answer is incomplete as it does not match the ground truth answer.
+
+
+Example 2
+Question: what is the limit of resolution of the human eye in micrometers
+Ground Truth Answer: ~55-75 micrometers
+Generated Answer: 200
+
+
+GPT-4o-mini Evaluation:
+Relevance: 5.0/10
+Accuracy: 2.0/10
+Completeness: 3.0/10
+Overall: 3.0/10
+Explanation: The generated answer is somewhat relevant as it attempts to address the question about the resolution of the human eye, but it is factually inaccurate and does not align with the ground truth. The answer is incomplete as it does not provide a range or context, leading to a low overall score.
+
+
+Example 3
+Question: who may be affected by monetary penalties imposed by the irs
+Ground Truth Answer: Taxpayers in the United States
+Generated Answer: individuals, businesses, and other taxpayers
+
+
+GPT-4o-mini Evaluation:
+Relevance: 9.0/10
+Accuracy: 8.0/10
+Completeness: 7.0/10
+Overall: 8.0/10
+Explanation: The generated answer is relevant as it identifies groups that may be affected by IRS penalties. It is mostly accurate, but the term 'other taxpayers' is somewhat vague. The answer is complete but could be improved by specifying that it refers to taxpayers in the U.S. Overall, it provides a good response to the question.
+
+
+
+==================================================
+Overall GPT-4o-mini Evaluation:
+Total evaluated examples: 3
+Average Relevance: 7.33/10
+Average Accuracy: 4.00/10
+Average Completeness: 5.00/10
+Average Overall Score: 4.67/10
+==================================================

@@ -75,20 +75,30 @@ def get_dataset(tokenizer, split='validation'):
 
 
 def _generate_config(tokenizer):
-    if tokenizer.__class__.__name__ == 'LlamaTokenizer':
-        eos_token_id = [tokenizer.encode(_)[-1] for _ in ['.', '\n']] + [29889]  # seems to be '.' as well
-        #eos_token_id = [tokenizer(_)['input_ids'] for _ in ['\n', ',', '.']]
-    elif tokenizer.__class__.__name__ == 'GPT2Tokenizer':
-        eos_token_id = [tokenizer.encode(_)[1] for _ in ['.', '\n']]
-    elif tokenizer.__class__.__name__ == "PreTrainedTokenizerFast":
-        eos_token_id = [tokenizer(_)['input_ids'][-1] for _ in ['\n', ',', '.']]
-    else:
-        raise NotImplementedError
-    eos_token_id += [tokenizer.eos_token_id]
+    """
+    Configure generation parameters for the tokenizer.
+    Works with LlamaTokenizerFast, LlamaTokenizer, and MistralTokenizerFast.
+    """
+    # Get end-of-sequence tokens
+    try:
+        eos_token_id = [tokenizer.encode(_)[-1] for _ in ['.', '\n']]
+    except:
+        # Fallback encoding method
+        eos_token_id = [tokenizer(_)['input_ids'][-1] for _ in ['.', '\n']]
+    
+    # Add the model's EOS token
+    eos_token_id.append(tokenizer.eos_token_id)
+    
+    # Define question framing patterns to avoid
     question_framing_ids = ['Question:', ' Question:', '\n', 'Answer:', ' Answer:', 'Q:']
-    # Follows Kuhn et al 2023 as Llama does not have CoQA
-    question_framing_ids = [[tokenizer(eos_token)['input_ids'][1]] for eos_token in question_framing_ids]
-    # question_framing_ids = [tokenizer(eos_token)['input_ids'] for eos_token in question_framing_ids]
+    
+    # Get token IDs for these patterns
+    try:
+        question_framing_ids = [[tokenizer(eos_token)['input_ids'][1]] for eos_token in question_framing_ids]
+    except:
+        # Fallback for different tokenizer formats
+        question_framing_ids = [[tokenizer.encode(eos_token)[1]] for eos_token in question_framing_ids]
+    
     return dict(eos_token_id=eos_token_id, bad_words_ids=question_framing_ids)
 
 if __name__ == '__main__':

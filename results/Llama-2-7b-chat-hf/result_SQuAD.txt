@@ -1,0 +1,74 @@
+Example 1
+Question: The word imperialism has it's origins in which ancient language? 
+Ground Truth Answer: Latin
+Generated Answer: The word imperialism has it's origins in the Latin language. The Latin word "imperium" means to rule over large territories.
+
+GPT-4o-mini Evaluation:
+Relevance: 10.0/10
+Accuracy: 10.0/10
+Completeness: 9.0/10
+Overall: 10.0/10
+Explanation: The generated answer is highly relevant as it directly addresses the origin of the word 'imperialism'. It is factually accurate, correctly identifying Latin as the source language and providing additional context about the Latin word 'imperium'. The answer is mostly complete, though it could be slightly improved by omitting the phrase 'the Latin language' since 'Latin' alone suffices.
+
+
+Example 2
+Question: The practice of occupying and looting Huguenot homes was called?
+Ground Truth Answer: dragonnades
+Generated Answer: Dragonnades.
+
+GPT-4o-mini Evaluation:
+Relevance: 10.0/10
+Accuracy: 10.0/10
+Completeness: 10.0/10
+Overall: 10.0/10
+Explanation: The generated answer 'Dragonnades' is highly relevant, factually accurate, and complete as it directly matches the ground truth answer with correct capitalization.
+
+
+Example 3
+Question: what did the UK parliment hear that a subscription to BSkyB was?
+Ground Truth Answer: often damaging
+Generated Answer: According to the passage, a subscription to BSkyB was described as "often damaging" along with alcohol, tobacco, and gambling.
+
+GPT-4o-mini Evaluation:
+Relevance: 10.0/10
+Accuracy: 10.0/10
+Completeness: 9.0/10
+Overall: 10.0/10
+Explanation: The generated answer is highly relevant as it directly addresses the question about the UK Parliament's description of a subscription to BSkyB. It accurately reflects the ground truth answer and provides additional context by mentioning the comparison to alcohol, tobacco, and gambling, which enhances understanding. The only minor point is that it could be slightly more concise, but overall, it effectively conveys the necessary information.
+
+
+Example 4
+Question: What civilization did the pottery belong to?
+Ground Truth Answer: Timucua
+Generated Answer: The pottery discovered on Black Hammock Island belongs to the Timucua people, specifically the Mocama subgroup.
+
+GPT-4o-mini Evaluation:
+Relevance: 10.0/10
+Accuracy: 10.0/10
+Completeness: 9.0/10
+Overall: 10.0/10
+Explanation: The generated answer is highly relevant as it directly addresses the question about the civilization to which the pottery belongs. It is factually accurate, identifying the Timucua people correctly. The answer is mostly complete, providing additional context about the Mocama subgroup, but this detail is not strictly necessary to answer the question.
+
+
+Example 5
+Question: Who were the current rights holders for the Primer League?
+Ground Truth Answer: ITV
+Generated Answer: ITV were the current rights holders for the Premier League.
+
+GPT-4o-mini Evaluation:
+Relevance: 10.0/10
+Accuracy: 9.0/10
+Completeness: 9.0/10
+Overall: 9.0/10
+Explanation: The generated answer is highly relevant as it directly addresses the question about the rights holders for the Premier League. It is mostly accurate, but there is a minor spelling error in 'Primer League' instead of 'Premier League'. The answer is complete as it provides the necessary information without omitting any details.
+
+
+
+==================================================
+Overall GPT-4o-mini Evaluation:
+Total evaluated examples: 5
+Average Relevance: 10.00/10
+Average Accuracy: 9.80/10
+Average Completeness: 9.20/10
+Average Overall Score: 9.80/10
+==================================================

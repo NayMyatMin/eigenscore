@@ -63,9 +63,17 @@ def _save_dataset():
             for paragraph in article['paragraphs']:
                 context = paragraph['context']
                 for qa in paragraph['qas']:
+                    # Skip questions that are marked as impossible (unanswerable)
+                    if 'is_impossible' in qa and qa['is_impossible']:
+                        continue
+                    
                     question = qa['question']
                     id = qa['id']
                     answers = qa['answers']
+                    
+                    # Skip if no answers are provided
+                    if not answers:
+                        continue
                     
                     dataset['context'].append(context)
                     dataset['question'].append(question)
@@ -75,6 +83,8 @@ def _save_dataset():
         # Convert to pandas DataFrame and then to HuggingFace Dataset
         dataset_df = pd.DataFrame.from_dict(dataset)
         dataset = Dataset.from_pandas(dataset_df)
+        
+        print(f"SQuAD dataset processed and filtered to include only answerable questions. Total: {len(dataset)} examples")
         dataset.save_to_disk(save_path)
         print(f"SQuAD dataset processed and saved to {save_path}")
     except Exception as e:
@@ -119,27 +129,26 @@ def get_dataset(tokenizer, split='validation'):
     return dataset
 
 def _generate_config(tokenizer):
-    """Create generation configuration for the SQuAD dataset"""
-    # Specific to each tokenizer type
-    if hasattr(tokenizer, '__class__') and tokenizer.__class__.__name__ == 'LlamaTokenizer':
+    """
+    Configure generation parameters for the tokenizer.
+    Works with LlamaTokenizerFast, LlamaTokenizer, and MistralTokenizerFast.
+    """
+    # Get end-of-sequence tokens
+    try:
         eos_token_id = [tokenizer.encode(_)[-1] for _ in ['.', '\n']]
-    elif hasattr(tokenizer, '__class__') and tokenizer.__class__.__name__ == 'GPT2Tokenizer':
-        eos_token_id = [tokenizer.encode(_)[1] for _ in ['.', '\n']]
-    else:
-        # Default handling for other tokenizers
-        eos_token_id = [tokenizer.encode(_)[-1] for _ in ['.', '\n']]
+    except:
+        # Fallback encoding method
+        eos_token_id = [tokenizer(_)['input_ids'][-1] for _ in ['.', '\n']]
     
-    # Add the model's default EOS token
-    if hasattr(tokenizer, 'eos_token_id'):
-        eos_token_id.append(tokenizer.eos_token_id)
+    # Add the model's EOS token
+    eos_token_id.append(tokenizer.eos_token_id)
     
     # Prevent model from generating further questions
-    bad_words_ids = []
     try:
         bad_words_ids = [tokenizer.encode(_)[1:] for _ in ['Question:', '\nQuestion']]
     except:
-        # If encoding fails, use an empty list
-        pass
+        # Fallback for different tokenizer formats
+        bad_words_ids = [tokenizer(_)['input_ids'][1:] for _ in ['Question:', '\nQuestion']]
     
     return dict(eos_token_id=eos_token_id, bad_words_ids=bad_words_ids)
 

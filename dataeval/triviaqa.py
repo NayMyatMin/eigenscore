@@ -37,18 +37,27 @@ Natural Questions and TriviaQA respectively. In all settings, we preprend the st
 questions:\n to the list of questions and answers.
 """
 def _generate_config(tokenizer):
-    if tokenizer.__class__.__name__ == 'LlamaTokenizer':
+    """
+    Configure generation parameters for the tokenizer.
+    Works with LlamaTokenizerFast, LlamaTokenizer, and MistralTokenizerFast.
+    """
+    # Get end-of-sequence tokens
+    try:
+        eos_token_id = [tokenizer.encode(_)[-1] for _ in ['\n', ',', '.']]
+    except:
+        # Fallback encoding method
         eos_token_id = [tokenizer(_)['input_ids'][-1] for _ in ['\n', ',', '.']]
-        #eos_token_id = [tokenizer(_)['input_ids'] for _ in ['\n', ',', '.']]
-    elif tokenizer.__class__.__name__ == 'GPT2Tokenizer':
-        eos_token_id = [tokenizer.encode(_)[1] for _ in ['\n', ',', '.']]
-    elif tokenizer.__class__.__name__ == "PreTrainedTokenizerFast":
-        eos_token_id = [tokenizer(_)['input_ids'][-1] for _ in ['\n', ',', '.']]
-    else:
-        raise NotImplementedError
-    eos_token_id += [tokenizer.eos_token_id]
-    #bad_words_ids = [tokenizer(_)['input_ids'][1] for _ in ['Q:']] # only "Q"
-    bad_words_ids = [tokenizer(_)['input_ids'] for _ in ['Q:']] # only "Q"
+    
+    # Add the model's EOS token
+    eos_token_id.append(tokenizer.eos_token_id)
+    
+    # Define bad words patterns to avoid
+    try:
+        bad_words_ids = [tokenizer(_)['input_ids'] for _ in ['Q:']]
+    except:
+        # Fallback for different tokenizer formats
+        bad_words_ids = [tokenizer.encode(_)[1:] for _ in ['Q:']]
+    
     return dict(eos_token_id=eos_token_id, bad_words_ids=bad_words_ids)
 
 
