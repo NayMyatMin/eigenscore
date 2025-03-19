@@ -1,0 +1,426 @@
+Hugging Face token loaded
+OpenAI API key loaded
+Starting dataset tests at Wed 19 Mar 2025 08:19:58 PM +08
+_settings.py loaded. DATA_FOLDER=/common/home/users/m/myatmin.nay.2022/eigenscore/data/datasets
+Loading tokenizer for meta-llama/Llama-2-7b-chat-hf...
+Tokenizer loaded successfully using AutoTokenizer
+Starting dataset tests with model: meta-llama/Llama-2-7b-chat-hf
+Testing datasets: coqa, triviaqa, nq_open, squad
+
+==================================================
+Testing COQA dataset loading with Llama-2-7b-chat-hf...
+Map:   0%|          | 0/7983 [00:00<?, ? examples/s]Map:   2%|▏         | 121/7983 [00:00<00:06, 1189.46 examples/s]Map:   3%|▎         | 242/7983 [00:00<00:06, 1195.52 examples/s]Map:   5%|▍         | 379/7983 [00:00<00:05, 1272.24 examples/s]Map:   7%|▋         | 567/7983 [00:00<00:05, 1258.89 examples/s]Map:   9%|▊         | 694/7983 [00:00<00:05, 1257.96 examples/s]Map:  11%|█         | 868/7983 [00:00<00:05, 1211.77 examples/s]Map:  12%|█▏        | 991/7983 [00:00<00:05, 1215.23 examples/s]Map:  14%|█▍        | 1136/7983 [00:01<00:07, 971.69 examples/s]Map:  16%|█▌        | 1295/7983 [00:01<00:06, 995.19 examples/s]Map:  18%|█▊        | 1413/7983 [00:01<00:06, 1034.84 examples/s]Map:  19%|█▉        | 1528/7983 [00:01<00:06, 1061.38 examples/s]Map:  21%|██        | 1642/7983 [00:01<00:05, 1080.04 examples/s]Map:  22%|██▏       | 1758/7983 [00:01<00:05, 1096.65 examples/s]Map:  24%|██▎       | 1882/7983 [00:01<00:05, 1133.70 examples/s]Map:  25%|██▌       | 2000/7983 [00:01<00:07, 841.31 examples/s] Map:  26%|██▋       | 2115/7983 [00:02<00:06, 910.04 examples/s]Map:  28%|██▊       | 2226/7983 [00:02<00:06, 956.32 examples/s]Map:  29%|██▉       | 2337/7983 [00:02<00:05, 993.58 examples/s]Map:  31%|███       | 2465/7983 [00:02<00:05, 1068.57 examples/s]Map:  32%|███▏      | 2582/7983 [00:02<00:04, 1094.26 examples/s]Map:  35%|███▍      | 2755/7983 [00:02<00:04, 1112.29 examples/s]Map:  36%|███▌      | 2877/7983 [00:02<00:04, 1139.14 examples/s]Map:  38%|███▊      | 2999/7983 [00:02<00:04, 1158.90 examples/s]Map:  39%|███▉      | 3134/7983 [00:02<00:05, 931.65 examples/s] Map:  41%|████      | 3257/7983 [00:03<00:04, 998.79 examples/s]Map:  42%|████▏     | 3373/7983 [00:03<00:04, 1036.09 examples/s]Map:  44%|████▍     | 3496/7983 [00:03<00:04, 1085.99 examples/s]Map:  46%|████▌     | 3638/7983 [00:03<00:04, 1031.53 examples/s]Map:  47%|████▋     | 3756/7983 [00:03<00:03, 1067.05 examples/s]Map:  49%|████▉     | 3924/7983 [00:03<00:03, 1083.57 examples/s]Map:  51%|█████     | 4076/7983 [00:03<00:04, 902.20 examples/s] Map:  52%|█████▏    | 4188/7983 [00:04<00:04, 945.72 examples/s]Map:  54%|█████▍    | 4310/7983 [00:04<00:03, 1007.83 examples/s]Map:  55%|█████▌    | 4427/7983 [00:04<00:03, 1045.89 examples/s]Map:  57%|█████▋    | 4543/7983 [00:04<00:03, 1072.53 examples/s]Map:  58%|█████▊    | 4663/7983 [00:04<00:03, 1106.13 examples/s]Map:  60%|█████▉    | 4786/7983 [00:04<00:02, 1136.99 examples/s]Map:  62%|██████▏   | 4910/7983 [00:04<00:02, 1165.81 examples/s]Map:  63%|██████▎   | 5063/7983 [00:04<00:03, 912.00 examples/s] Map:  65%|██████▍   | 5183/7983 [00:04<00:02, 976.23 examples/s]Map:  67%|██████▋   | 5310/7983 [00:05<00:02, 1047.53 examples/s]Map:  68%|██████▊   | 5431/7983 [00:05<00:02, 1087.68 examples/s]Map:  70%|███████   | 5589/7983 [00:05<00:02, 1074.29 examples/s]Map:  72%|███████▏  | 5717/7983 [00:05<00:02, 1124.38 examples/s]Map:  74%|███████▎  | 5877/7983 [00:05<00:01, 1096.49 examples/s]Map:  75%|███████▌  | 5996/7983 [00:05<00:01, 1117.59 examples/s]Map:  77%|███████▋  | 6117/7983 [00:05<00:02, 891.72 examples/s] Map:  78%|███████▊  | 6239/7983 [00:05<00:01, 964.81 examples/s]Map:  80%|███████▉  | 6352/7983 [00:06<00:01, 1002.33 examples/s]Map:  81%|████████  | 6464/7983 [00:06<00:01, 1031.25 examples/s]Map:  82%|████████▏ | 6583/7983 [00:06<00:01, 1071.60 examples/s]Map:  84%|████████▍ | 6721/7983 [00:06<00:01, 1155.16 examples/s]Map:  86%|████████▌ | 6846/7983 [00:06<00:00, 1180.61 examples/s]Map:  88%|████████▊ | 7000/7983 [00:06<00:01, 916.25 examples/s] Map:  89%|████████▉ | 7107/7983 [00:06<00:00, 948.82 examples/s]Map:  91%|█████████ | 7232/7983 [00:06<00:00, 1020.37 examples/s]Map:  92%|█████████▏| 7351/7983 [00:07<00:00, 1061.19 examples/s]Map:  94%|█████████▍| 7510/7983 [00:07<00:00, 1057.57 examples/s]Map:  96%|█████████▌| 7624/7983 [00:07<00:00, 1076.09 examples/s]Map:  97%|█████████▋| 7747/7983 [00:07<00:00, 1115.85 examples/s]Map:  99%|█████████▊| 7876/7983 [00:07<00:00, 1161.22 examples/s]Map: 100%|██████████| 7983/7983 [00:07<00:00, 1042.51 examples/s]
+Dataset loaded successfully with 7983 examples
+Sampling 5 examples...
+Dataset columns: ['story', 'question', 'answer', 'additional_answers', 'id', 'prompt', 'input_ids', 'attention_mask']
+Column analysis: {
+  "story": {
+    "type": "str",
+    "avg_length": "1571.91 chars"
+  },
+  "question": {
+    "type": "str",
+    "avg_length": "26.89 chars"
+  },
+  "answer": {
+    "type": "str",
+    "avg_length": "12.99 chars"
+  },
+  "additional_answers": {
+    "type": "list",
+    "avg_length": "3.00 elements"
+  },
+  "id": {
+    "type": "str",
+    "avg_length": "32.30 chars"
+  },
+  "prompt": {
+    "type": "str",
+    "avg_length": "1605.80 chars"
+  }
+}
+
+Prompt format examples:
+Example 1:
+Once upon a time, in a barn near a farm house, there lived a little white kitten named Cotton. Cotton lived high up in a nice warm place above the barn where all of the farmer's horses slept. But Cotton wasn't alone in her little home above the barn, oh no. She shared her hay bed with her mommy and 5 other sisters. All of her sisters were cute and fluffy, like Cotton. But she was the only white one in the bunch. The rest of her sisters were all orange with beautiful white tiger stripes like Cotton's mommy. Being different made Cotton quite sad. She often wished she looked like the rest of her family. So one day, when Cotton found a can of the old farmer's orange paint, she used it to paint herself like them. When her mommy and sisters found her they started laughing. 
+
+"What are you doing, Cotton?!" 
+
+"I only wanted to be more like you". 
+
+Cotton's mommy rubbed her face on Cotton's and said "Oh Cotton, but your fur is so pretty and special, like you. We would never want you to be any other way". And with that, Cotton's mommy picked her up and dropped her into a big bucket of water. When Cotton came out she was herself again. Her sisters licked her face until Cotton's fur was all all dry. 
+
+"Don't ever do that again, Cotton!" they all cried. "Next time you might mess up that pretty white fur of yours and we wouldn't want that!" 
+
+Then Cotton thought, "I change my mind. I like being special". Q: What color was Cotton? A:
+
+Example 2:
+Once upon a time, in a barn near a farm house, there lived a little white kitten named Cotton. Cotton lived high up in a nice warm place above the barn where all of the farmer's horses slept. But Cotton wasn't alone in her little home above the barn, oh no. She shared her hay bed with her mommy and 5 other sisters. All of her sisters were cute and fluffy, like Cotton. But she was the only white one in the bunch. The rest of her sisters were all orange with beautiful white tiger stripes like Cotton's mommy. Being different made Cotton quite sad. She often wished she looked like the rest of her family. So one day, when Cotton found a can of the old farmer's orange paint, she used it to paint herself like them. When her mommy and sisters found her they started laughing. 
+
+"What are you doing, Cotton?!" 
+
+"I only wanted to be more like you". 
+
+Cotton's mommy rubbed her face on Cotton's and said "Oh Cotton, but your fur is so pretty and special, like you. We would never want you to be any other way". And with that, Cotton's mommy picked her up and dropped her into a big bucket of water. When Cotton came out she was herself again. Her sisters licked her face until Cotton's fur was all all dry. 
+
+"Don't ever do that again, Cotton!" they all cried. "Next time you might mess up that pretty white fur of yours and we wouldn't want that!" 
+
+Then Cotton thought, "I change my mind. I like being special". Q: Where did she live? A:
+
+Example 3:
+Once upon a time, in a barn near a farm house, there lived a little white kitten named Cotton. Cotton lived high up in a nice warm place above the barn where all of the farmer's horses slept. But Cotton wasn't alone in her little home above the barn, oh no. She shared her hay bed with her mommy and 5 other sisters. All of her sisters were cute and fluffy, like Cotton. But she was the only white one in the bunch. The rest of her sisters were all orange with beautiful white tiger stripes like Cotton's mommy. Being different made Cotton quite sad. She often wished she looked like the rest of her family. So one day, when Cotton found a can of the old farmer's orange paint, she used it to paint herself like them. When her mommy and sisters found her they started laughing. 
+
+"What are you doing, Cotton?!" 
+
+"I only wanted to be more like you". 
+
+Cotton's mommy rubbed her face on Cotton's and said "Oh Cotton, but your fur is so pretty and special, like you. We would never want you to be any other way". And with that, Cotton's mommy picked her up and dropped her into a big bucket of water. When Cotton came out she was herself again. Her sisters licked her face until Cotton's fur was all all dry. 
+
+"Don't ever do that again, Cotton!" they all cried. "Next time you might mess up that pretty white fur of yours and we wouldn't want that!" 
+
+Then Cotton thought, "I change my mind. I like being special". Q: Did she live alone? A:
+
+Prompt length stats: Avg=1500.59, Min=728, Max=2353
+
+Analyzing tokenization...
+Token length stats: Avg=397.41, Min=183, Max=595
+Examples potentially needing truncation (>2048 tokens): 0 (0.00%)
+
+Sample tokenization verification (example 10):
+Original input: Once upon a time, in a barn near a farm house, there lived a little white kitten named Cotton. Cotton lived high up in a nice warm place above the barn where all of the farmer's horses slept. But Cotton wasn't alone in her little home above the barn, oh no. She shared her hay bed with her mommy and 5 other sisters. All of her sisters were cute and fluffy, like Cotton. But she was the only white one in the bunch. The rest of her sisters were all orange with beautiful white tiger stripes like Cotton's mommy. Being different made Cotton quite sad. She often wished she looked like the rest of her family. So one day, when Cotton found a can of the old farmer's orange paint, she used it to paint herself like them. When her mommy and sisters found her they started laughing. 
+
+"What are you doing, Cotton?!" 
+
+"I only wanted to be more like you". 
+
+Cotton's mommy rubbed her face on Cotton's and said "Oh Cotton, but your fur is so pretty and special, like you. We would never want you to be any other way". And with that, Cotton's mommy picked her up and dropped her into a big bucket of water. When Cotton came out she was herself again. Her sisters licked her face until Cotton's fur was all all dry. 
+
+"Don't ever do that again, Cotton!" they all cried. "Next time you might mess up that pretty white fur of yours and we wouldn't want that!" 
+
+Then Cotton thought, "I change my mind. I like being special". Q: What did the other cats do when Cotton emerged from the bucket of water? A:
+Decoded from tokens: <s> Once upon a time, in a barn near a farm house, there lived a little white kitten named Cotton. Cotton lived high up in a nice warm place above the barn where all of the farmer's horses slept. But Cotton wasn't alone in her little home above the barn, oh no. She shared her hay bed with her mommy and 5 other sisters. All of her sisters were cute and fluffy, like Cotton. But she was the only white one in the bunch. The rest of her sisters were all orange with beautiful white tiger stripes like Cotton's mommy. Being different made Cotton quite sad. She often wished she looked like the rest of her family. So one day, when Cotton found a can of the old farmer's orange paint, she used it to paint herself like them. When her mommy and sisters found her they started laughing. 
+
+"What are you doing, Cotton?!" 
+
+"I only wanted to be more like you". 
+
+Cotton's mommy rubbed her face on Cotton's and said "Oh Cotton, but your fur is so pretty and special, like you. We would never want you to be any other way". And with that, Cotton's mommy picked her up and dropped her into a big bucket of water. When Cotton came out she was herself again. Her sisters licked her face until Cotton's fur was all all dry. 
+
+"Don't ever do that again, Cotton!" they all cried. "Next time you might mess up that pretty white fur of yours and we wouldn't want that!" 
+
+Then Cotton thought, "I change my mind. I like being special". Q: What did the other cats do when Cotton emerged from the bucket of water? A:
+Error getting generation config: 
+
+==================================================
+Testing TRIVIAQA dataset loading with Llama-2-7b-chat-hf...
+Map:   0%|          | 0/17944 [00:00<?, ? examples/s]Map:   1%|          | 126/17944 [00:00<00:14, 1233.31 examples/s]Map:   1%|▏         | 258/17944 [00:00<00:13, 1279.16 examples/s]Map:   3%|▎         | 450/17944 [00:00<00:13, 1271.76 examples/s]Map:   3%|▎         | 583/17944 [00:00<00:13, 1286.44 examples/s]Map:   4%|▍         | 716/17944 [00:00<00:13, 1296.27 examples/s]Map:   5%|▍         | 848/17944 [00:00<00:13, 1301.67 examples/s]Map:   5%|▌         | 980/17944 [00:00<00:12, 1305.17 examples/s]Map:   6%|▌         | 1113/17944 [00:00<00:12, 1308.63 examples/s]Map:   7%|▋         | 1245/17944 [00:00<00:12, 1309.57 examples/s]Map:   8%|▊         | 1439/17944 [00:01<00:12, 1299.56 examples/s]Map:   9%|▉         | 1571/17944 [00:01<00:12, 1304.42 examples/s]Map:  10%|▉         | 1705/17944 [00:01<00:12, 1310.23 examples/s]Map:  10%|█         | 1839/17944 [00:01<00:12, 1314.53 examples/s]Map:  11%|█▏        | 2035/17944 [00:01<00:12, 1308.87 examples/s]Map:  12%|█▏        | 2169/17944 [00:01<00:12, 1312.53 examples/s]Map:  13%|█▎        | 2303/17944 [00:01<00:11, 1316.06 examples/s]Map:  14%|█▎        | 2437/17944 [00:01<00:11, 1318.79 examples/s]Map:  14%|█▍        | 2571/17944 [00:01<00:11, 1319.90 examples/s]Map:  15%|█▌        | 2764/17944 [00:02<00:11, 1304.72 examples/s]Map:  16%|█▌        | 2895/17944 [00:02<00:11, 1303.72 examples/s]Map:  17%|█▋        | 3028/17944 [00:02<00:11, 1308.91 examples/s]Map:  18%|█▊        | 3162/17944 [00:02<00:11, 1314.17 examples/s]Map:  18%|█▊        | 3296/17944 [00:02<00:11, 1316.56 examples/s]Map:  19%|█▉        | 3429/17944 [00:02<00:11, 1317.61 examples/s]Map:  20%|█▉        | 3563/17944 [00:02<00:10, 1319.78 examples/s]Map:  21%|██        | 3696/17944 [00:02<00:10, 1319.04 examples/s]Map:  21%|██▏       | 3829/17944 [00:02<00:10, 1319.13 examples/s]Map:  22%|██▏       | 4025/17944 [00:03<00:10, 1310.48 examples/s]Map:  23%|██▎       | 4159/17944 [00:03<00:10, 1314.10 examples/s]Map:  24%|██▍       | 4293/17944 [00:03<00:10, 1317.04 examples/s]Map:  25%|██▍       | 4425/17944 [00:03<00:10, 1314.68 examples/s]Map:  25%|██▌       | 4559/17944 [00:03<00:10, 1317.83 examples/s]Map:  26%|██▌       | 4693/17944 [00:03<00:10, 1318.62 examples/s]Map:  27%|██▋       | 4826/17944 [00:03<00:09, 1318.40 examples/s]Map:  28%|██▊       | 5019/17944 [00:03<00:09, 1305.14 examples/s]Map:  29%|██▉       | 5212/17944 [00:03<00:09, 1295.24 examples/s]Map:  30%|██▉       | 5346/17944 [00:04<00:09, 1302.93 examples/s]Map:  31%|███       | 5478/17944 [00:04<00:09, 1306.90 examples/s]Map:  31%|███▏      | 5611/17944 [00:04<00:09, 1310.22 examples/s]Map:  32%|███▏      | 5744/17944 [00:04<00:09, 1313.49 examples/s]Map:  33%|███▎      | 5878/17944 [00:04<00:09, 1316.66 examples/s]Map:  34%|███▎      | 6012/17944 [00:04<00:09, 1318.41 examples/s]Map:  34%|███▍      | 6146/17944 [00:04<00:08, 1319.42 examples/s]Map:  35%|███▍      | 6280/17944 [00:04<00:08, 1320.20 examples/s]Map:  36%|███▌      | 6476/17944 [00:04<00:08, 1308.58 examples/s]Map:  37%|███▋      | 6610/17944 [00:05<00:08, 1313.36 examples/s]Map:  38%|███▊      | 6744/17944 [00:05<00:08, 1316.62 examples/s]Map:  38%|███▊      | 6876/17944 [00:05<00:08, 1313.38 examples/s]Map:  39%|███▉      | 7010/17944 [00:05<00:08, 1317.16 examples/s]Map:  40%|███▉      | 7144/17944 [00:05<00:08, 1320.67 examples/s]Map:  41%|████      | 7343/17944 [00:05<00:08, 1319.96 examples/s]Map:  42%|████▏     | 7477/17944 [00:05<00:07, 1321.43 examples/s]Map:  42%|████▏     | 7610/17944 [00:05<00:07, 1320.90 examples/s]Map:  43%|████▎     | 7804/17944 [00:05<00:07, 1309.11 examples/s]Map:  44%|████▍     | 7938/17944 [00:06<00:07, 1313.29 examples/s]Map:  45%|████▍     | 8072/17944 [00:06<00:07, 1316.09 examples/s]Map:  46%|████▌     | 8205/17944 [00:06<00:07, 1317.77 examples/s]Map:  46%|████▋     | 8339/17944 [00:06<00:07, 1320.06 examples/s]Map:  47%|████▋     | 8473/17944 [00:06<00:07, 1321.81 examples/s]Map:  48%|████▊     | 8607/17944 [00:06<00:07, 1322.21 examples/s]Map:  49%|████▉     | 8805/17944 [00:06<00:06, 1314.86 examples/s]Map:  50%|████▉     | 8937/17944 [00:06<00:06, 1312.19 examples/s]Map:  51%|█████     | 9130/17944 [00:06<00:06, 1300.48 examples/s]Map:  52%|█████▏    | 9263/17944 [00:07<00:06, 1305.86 examples/s]Map:  52%|█████▏    | 9397/17944 [00:07<00:06, 1311.73 examples/s]Map:  53%|█████▎    | 9529/17944 [00:07<00:06, 1309.93 examples/s]Map:  54%|█████▍    | 9662/17944 [00:07<00:06, 1313.32 examples/s]Map:  55%|█████▍    | 9796/17944 [00:07<00:06, 1317.59 examples/s]Map:  59%|█████▉    | 10579/17944 [00:07<00:02, 2799.14 examples/s]Map:  70%|███████   | 12629/17944 [00:07<00:00, 7501.07 examples/s]Map:  82%|████████▏ | 14730/17944 [00:07<00:00, 11215.99 examples/s]Map:  94%|█████████▍| 16839/17944 [00:07<00:00, 13992.81 examples/s]Map: 100%|██████████| 17944/17944 [00:08<00:00, 2178.48 examples/s] 
+Map:   0%|          | 0/9960 [00:00<?, ? examples/s]Map:   4%|▍         | 390/9960 [00:00<00:02, 3694.84 examples/s]Map:   8%|▊         | 780/9960 [00:00<00:02, 3737.58 examples/s]Map:  12%|█▏        | 1180/9960 [00:00<00:02, 3840.13 examples/s]Map:  16%|█▌        | 1610/9960 [00:00<00:02, 3949.96 examples/s]Map:  20%|██        | 2040/9960 [00:00<00:01, 4022.63 examples/s]Map:  25%|██▍       | 2460/9960 [00:00<00:01, 4072.06 examples/s]Map:  29%|██▉       | 2880/9960 [00:00<00:01, 4098.78 examples/s]Map:  33%|███▎      | 3300/9960 [00:00<00:01, 4107.93 examples/s]Map:  37%|███▋      | 3720/9960 [00:00<00:01, 4120.76 examples/s]Map:  43%|████▎     | 4320/9960 [00:01<00:01, 4064.61 examples/s]Map:  47%|████▋     | 4730/9960 [00:01<00:01, 4041.70 examples/s]Map:  52%|█████▏    | 5150/9960 [00:01<00:01, 4063.71 examples/s]Map:  56%|█████▌    | 5580/9960 [00:01<00:01, 4088.05 examples/s]Map:  60%|██████    | 6010/9960 [00:01<00:00, 4118.14 examples/s]Map:  65%|██████▍   | 6450/9960 [00:01<00:00, 4184.57 examples/s]Map:  69%|██████▉   | 6880/9960 [00:01<00:00, 4191.59 examples/s]Map:  73%|███████▎  | 7320/9960 [00:01<00:00, 4213.92 examples/s]Map:  78%|███████▊  | 7750/9960 [00:01<00:00, 4203.33 examples/s]Map:  82%|████████▏ | 8190/9960 [00:01<00:00, 4223.51 examples/s]Map:  87%|████████▋ | 8630/9960 [00:02<00:00, 4230.82 examples/s]Map:  91%|█████████ | 9080/9960 [00:02<00:00, 4260.21 examples/s]Map:  96%|█████████▌| 9520/9960 [00:02<00:00, 4279.03 examples/s]Map: 100%|██████████| 9960/9960 [00:02<00:00, 4183.64 examples/s]Map: 100%|██████████| 9960/9960 [00:02<00:00, 4089.53 examples/s]
+Dataset loaded successfully with 9960 examples
+Sampling 5 examples...
+Dataset columns: ['question', 'question_id', 'answer', 'input_ids', 'attention_mask', 'decoder_input_ids', 'decoder_attention_mask', 'labels', 'id', 'prompt']
+Column analysis: {
+  "question": {
+    "type": "str",
+    "avg_length": "58.33 chars"
+  },
+  "question_id": {
+    "type": "str",
+    "avg_length": "6.13 chars"
+  },
+  "answer": {
+    "type": "str",
+    "avg_length": "10.24 chars"
+  },
+  "decoder_input_ids": {
+    "type": "Tensor",
+    "avg_length": "4.24 elements"
+  },
+  "decoder_attention_mask": {
+    "type": "Tensor",
+    "avg_length": "4.24 elements"
+  },
+  "labels": {
+    "type": "Tensor",
+    "avg_length": "4.24 elements"
+  },
+  "id": {
+    "type": "str",
+    "avg_length": "6.13 chars"
+  },
+  "prompt": {
+    "type": "str",
+    "avg_length": "133.33 chars"
+  }
+}
+
+Prompt format examples:
+Example 1:
+Answer these questions:
+Q: In Scotland a bothy/bothie is a?
+A: House
+Q: Who was the man behind The Chipmunks?
+A:
+
+Example 2:
+Answer these questions:
+Q: In Scotland a bothy/bothie is a?
+A: House
+Q: Which Lloyd Webber musical premiered in the US on 10th December 1993?
+A:
+
+Example 3:
+Answer these questions:
+Q: In Scotland a bothy/bothie is a?
+A: House
+Q: Who was the next British Prime Minister after Arthur Balfour?
+A:
+
+Prompt length stats: Avg=142.66, Min=97, Max=301
+
+Analyzing tokenization...
+Token length stats: Avg=46.76, Min=35, Max=86
+Examples potentially needing truncation (>2048 tokens): 0 (0.00%)
+
+Sample tokenization verification (example 10):
+Original input: Answer these questions:
+Q: In Scotland a bothy/bothie is a?
+A: House
+Q: In which decade did stereo records first go on sale?
+A:
+Decoded from tokens: <s> Answer these questions:
+Q: In Scotland a bothy/bothie is a?
+A: House
+Q: In which decade did stereo records first go on sale?
+A:
+Error getting generation config: 
+
+==================================================
+Testing NQ_OPEN dataset loading with Llama-2-7b-chat-hf...
+Map:   0%|          | 0/3610 [00:00<?, ? examples/s]Map:   0%|          | 1/3610 [00:06<6:21:08,  6.34s/ examples]Map:   9%|▊         | 314/3610 [00:06<00:47, 69.16 examples/s]Map:  17%|█▋        | 629/3610 [00:06<00:18, 163.22 examples/s]Map:  26%|██▌       | 943/3610 [00:06<00:09, 287.61 examples/s]Map:  36%|███▋      | 1315/3610 [00:06<00:04, 467.56 examples/s]Map:  45%|████▌     | 1635/3610 [00:06<00:02, 665.68 examples/s]Map:  55%|█████▌    | 1995/3610 [00:07<00:01, 842.58 examples/s]Map:  66%|██████▌   | 2375/3610 [00:07<00:01, 1100.23 examples/s]Map:  75%|███████▍  | 2693/3610 [00:07<00:00, 1363.53 examples/s]Map:  83%|████████▎ | 3000/3610 [00:07<00:00, 1561.02 examples/s]Map:  92%|█████████▏| 3314/3610 [00:07<00:00, 1834.02 examples/s]Map: 100%|██████████| 3610/3610 [00:07<00:00, 1996.59 examples/s]Map: 100%|██████████| 3610/3610 [00:07<00:00, 468.31 examples/s] 
+Dataset loaded successfully with 3610 examples
+Sampling 5 examples...
+Dataset columns: ['question', 'answer', 'id', 'additional_answers', 'prompt', 'input_ids', 'attention_mask', 'labels']
+Column analysis: {
+  "question": {
+    "type": "str",
+    "avg_length": "46.71 chars"
+  },
+  "answer": {
+    "type": "str",
+    "avg_length": "12.96 chars"
+  },
+  "id": {
+    "type": "str",
+    "avg_length": "1.90 chars"
+  },
+  "additional_answers": {
+    "type": "list",
+    "avg_length": "0.61 elements"
+  },
+  "prompt": {
+    "type": "str",
+    "avg_length": "418.71 chars"
+  },
+  "labels": {
+    "type": "Tensor",
+    "avg_length": "5.44 elements"
+  }
+}
+
+Prompt format examples:
+Example 1:
+Answer these questions:
+Q: who makes up the state council in russia
+A: governors and presidents
+Q: when does real time with bill maher come back
+A: November 9, 2018
+Q: where did the phrase american dream come from
+A: the mystique regarding frontier life
+Q: what do you call a group of eels
+A: bed
+Q: who wrote the score for mission impossible fallout
+A: Lorne Balfe
+Q: when was the last time anyone was on the moon
+A:
+
+Example 2:
+Answer these questions:
+Q: who makes up the state council in russia
+A: governors and presidents
+Q: when does real time with bill maher come back
+A: November 9, 2018
+Q: where did the phrase american dream come from
+A: the mystique regarding frontier life
+Q: what do you call a group of eels
+A: bed
+Q: who wrote the score for mission impossible fallout
+A: Lorne Balfe
+Q: who wrote he ain't heavy he's my brother lyrics
+A:
+
+Example 3:
+Answer these questions:
+Q: who makes up the state council in russia
+A: governors and presidents
+Q: when does real time with bill maher come back
+A: November 9, 2018
+Q: where did the phrase american dream come from
+A: the mystique regarding frontier life
+Q: what do you call a group of eels
+A: bed
+Q: who wrote the score for mission impossible fallout
+A: Lorne Balfe
+Q: how many seasons of the bastard executioner are there
+A:
+
+Prompt length stats: Avg=419.53, Min=402, Max=471
+
+Analyzing tokenization...
+Token length stats: Avg=124.59, Min=121, Max=135
+Examples potentially needing truncation (>2048 tokens): 0 (0.00%)
+
+Sample tokenization verification (example 10):
+Original input: Answer these questions:
+Q: who makes up the state council in russia
+A: governors and presidents
+Q: when does real time with bill maher come back
+A: November 9, 2018
+Q: where did the phrase american dream come from
+A: the mystique regarding frontier life
+Q: what do you call a group of eels
+A: bed
+Q: who wrote the score for mission impossible fallout
+A: Lorne Balfe
+Q: which state is located in the centre of india
+A:
+Decoded from tokens: <s> Answer these questions:
+Q: who makes up the state council in russia
+A: governors and presidents
+Q: when does real time with bill maher come back
+A: November 9, 2018
+Q: where did the phrase american dream come from
+A: the mystique regarding frontier life
+Q: what do you call a group of eels
+A: bed
+Q: who wrote the score for mission impossible fallout
+A: Lorne Balfe
+Q: which state is located in the centre of india
+A:
+Error getting generation config: 
+
+==================================================
+Testing SQUAD dataset loading with Llama-2-7b-chat-hf...
+Map:   0%|          | 0/11873 [00:00<?, ? examples/s]Map:  17%|█▋        | 2000/11873 [00:00<00:01, 9464.35 examples/s]Map:  25%|██▌       | 3000/11873 [00:00<00:00, 9058.43 examples/s]Map:  34%|███▎      | 4000/11873 [00:00<00:01, 7564.58 examples/s]Map:  42%|████▏     | 5000/11873 [00:00<00:00, 7551.39 examples/s]Map:  51%|█████     | 6000/11873 [00:00<00:00, 7722.74 examples/s]Map:  59%|█████▉    | 7000/11873 [00:00<00:00, 7763.08 examples/s]Map:  67%|██████▋   | 8000/11873 [00:01<00:00, 7635.79 examples/s]Map:  76%|███████▌  | 9000/11873 [00:01<00:00, 7796.98 examples/s]Map:  84%|████████▍ | 10000/11873 [00:01<00:00, 8062.90 examples/s]Map:  93%|█████████▎| 11000/11873 [00:01<00:00, 8036.68 examples/s]Map: 100%|██████████| 11873/11873 [00:01<00:00, 8097.52 examples/s]Map: 100%|██████████| 11873/11873 [00:01<00:00, 7934.36 examples/s]
+Dataset loaded successfully with 11873 examples
+Sampling 5 examples...
+Dataset columns: ['context', 'question', 'answers', 'id', 'prompt', 'input_ids', 'attention_mask']
+Column analysis: {
+  "context": {
+    "type": "str",
+    "avg_length": "778.58 chars"
+  },
+  "question": {
+    "type": "str",
+    "avg_length": "43.63 chars"
+  },
+  "answers": {
+    "type": "list",
+    "avg_length": "1.40 elements"
+  },
+  "id": {
+    "type": "str",
+    "avg_length": "24.00 chars"
+  },
+  "prompt": {
+    "type": "str",
+    "avg_length": "850.21 chars"
+  }
+}
+
+Prompt format examples:
+Example 1:
+Context: The Normans (Norman: Nourmands; French: Normands; Latin: Normanni) were the people who in the 10th and 11th centuries gave their name to Normandy, a region in France. They were descended from Norse ("Norman" comes from "Norseman") raiders and pirates from Denmark, Iceland and Norway who, under their leader Rollo, agreed to swear fealty to King Charles III of West Francia. Through generations of assimilation and mixing with the native Frankish and Roman-Gaulish populations, their descendants would gradually merge with the Carolingian-based cultures of West Francia. The distinct cultural and ethnic identity of the Normans emerged initially in the first half of the 10th century, and it continued to evolve over the succeeding centuries.
+Question: In what country is Normandy located?
+Answer:
+
+Example 2:
+Context: The Normans (Norman: Nourmands; French: Normands; Latin: Normanni) were the people who in the 10th and 11th centuries gave their name to Normandy, a region in France. They were descended from Norse ("Norman" comes from "Norseman") raiders and pirates from Denmark, Iceland and Norway who, under their leader Rollo, agreed to swear fealty to King Charles III of West Francia. Through generations of assimilation and mixing with the native Frankish and Roman-Gaulish populations, their descendants would gradually merge with the Carolingian-based cultures of West Francia. The distinct cultural and ethnic identity of the Normans emerged initially in the first half of the 10th century, and it continued to evolve over the succeeding centuries.
+Question: When were the Normans in Normandy?
+Answer:
+
+Example 3:
+Context: The Normans (Norman: Nourmands; French: Normands; Latin: Normanni) were the people who in the 10th and 11th centuries gave their name to Normandy, a region in France. They were descended from Norse ("Norman" comes from "Norseman") raiders and pirates from Denmark, Iceland and Norway who, under their leader Rollo, agreed to swear fealty to King Charles III of West Francia. Through generations of assimilation and mixing with the native Frankish and Roman-Gaulish populations, their descendants would gradually merge with the Carolingian-based cultures of West Francia. The distinct cultural and ethnic identity of the Normans emerged initially in the first half of the 10th century, and it continued to evolve over the succeeding centuries.
+Question: From which countries did the Norse originate?
+Answer:
+
+Prompt length stats: Avg=682.43, Min=236, Max=1842
+
+Analyzing tokenization...
+Token length stats: Avg=159.31, Min=47, Max=469
+Examples potentially needing truncation (>2048 tokens): 0 (0.00%)
+
+Sample tokenization verification (example 10):
+Original input: Context: The Norman dynasty had a major political, cultural and military impact on medieval Europe and even the Near East. The Normans were famed for their martial spirit and eventually for their Christian piety, becoming exponents of the Catholic orthodoxy into which they assimilated. They adopted the Gallo-Romance language of the Frankish land they settled, their dialect becoming known as Norman, Normaund or Norman French, an important literary language. The Duchy of Normandy, which they formed by treaty with the French crown, was a great fief of medieval France, and under Richard I of Normandy was forged into a cohesive and formidable principality in feudal tenure. The Normans are noted both for their culture, such as their unique Romanesque architecture and musical traditions, and for their significant military accomplishments and innovations. Norman adventurers founded the Kingdom of Sicily under Roger II after conquering southern Italy on the Saracens and Byzantines, and an expedition on behalf of their duke, William the Conqueror, led to the Norman conquest of England at the Battle of Hastings in 1066. Norman cultural and military influence spread from these new European centres to the Crusader states of the Near East, where their prince Bohemond I founded the Principality of Antioch in the Levant, to Scotland and Wales in Great Britain, to Ireland, and to the coasts of north Africa and the Canary Islands.
+Question: Who ruled the duchy of Normandy
+Answer:
+Decoded from tokens: <s> Context: The Norman dynasty had a major political, cultural and military impact on medieval Europe and even the Near East. The Normans were famed for their martial spirit and eventually for their Christian piety, becoming exponents of the Catholic orthodoxy into which they assimilated. They adopted the Gallo-Romance language of the Frankish land they settled, their dialect becoming known as Norman, Normaund or Norman French, an important literary language. The Duchy of Normandy, which they formed by treaty with the French crown, was a great fief of medieval France, and under Richard I of Normandy was forged into a cohesive and formidable principality in feudal tenure. The Normans are noted both for their culture, such as their unique Romanesque architecture and musical traditions, and for their significant military accomplishments and innovations. Norman adventurers founded the Kingdom of Sicily under Roger II after conquering southern Italy on the Saracens and Byzantines, and an expedition on behalf of their duke, William the Conqueror, led to the Norman conquest of England at the Battle of Hastings in 1066. Norman cultural and military influence spread from these new European centres to the Crusader states of the Near East, where their prince Bohemond I founded the Principality of Antioch in the Levant, to Scotland and Wales in Great Britain, to Ireland, and to the coasts of north Africa and the Canary Islands.
+Question: Who ruled the duchy of Normandy
+Answer:
+
+Generation config: {
+  "eos_token_id": [
+    869,
+    13,
+    2
+  ],
+  "bad_words_ids": [
+    [
+      894,
+      29901
+    ],
+    [
+      29871,
+      13,
+      16492
+    ]
+  ]
+}
+
+==================================================
+Testing complete: 4/4 datasets loaded successfully
+
+GENERATING SUMMARY REPORT FOR LLAMA 2 TESTING
+--------------------------------------------------
+Dataset sizes: {
+  "coqa": 7983,
+  "triviaqa": 9960,
+  "nq_open": 3610,
+  "squad": 11873
+}
+Tokenization summary: {
+  "coqa": {
+    "avg_tokens": 397.414,
+    "max_tokens": 595
+  },
+  "triviaqa": {
+    "avg_tokens": 46.758,
+    "max_tokens": 86
+  },
+  "nq_open": {
+    "avg_tokens": 124.587,
+    "max_tokens": 135
+  },
+  "squad": {
+    "avg_tokens": 159.31,
+    "max_tokens": 469
+  }
+}
+Detailed results saved to /common/home/users/m/myatmin.nay.2022/eigenscore/dataset_test_results_llama2_7b_chat_hf.json
+
+Dataset Comparison for Llama 2:
+    Dataset   Size  Avg Tokens  Max Tokens Prompt Columns Gen Config
+0      coqa   7983     397.414         595            Yes         No
+1  triviaqa   9960      46.758          86            Yes         No
+2   nq_open   3610     124.587         135            Yes         No
+3     squad  11873     159.310         469            Yes        Yes
+Tests completed at Wed 19 Mar 2025 08:20:54 PM +08

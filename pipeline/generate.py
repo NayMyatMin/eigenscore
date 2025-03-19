@@ -75,8 +75,13 @@ def get_generation_config(input_ids, tokenizer, data_name):
 def get_generations(model_name:str, args, seed=1, old_sequences=None, max_num_gen_once=args.num_generations_per_prompt):
     device = args.device
     model, tokenizer = models.load_model_and_tokenizer(model_name, args.device)
-    SenSimModel = SentenceTransformer('./data/weights/nli-roberta-large')
-    bertscore = BERTScore(model_name_or_path="./data/weights/bert-base/", device="cuda")
+    
+    # Use MODEL_PATH from settings instead of hard-coded paths
+    nli_model_path = os.path.join(_settings.MODEL_PATH, 'nli-roberta-large')
+    bert_model_path = os.path.join(_settings.MODEL_PATH, 'bert-base')
+    
+    SenSimModel = SentenceTransformer(nli_model_path)
+    bertscore = BERTScore(model_name_or_path=bert_model_path, device=device)
 
     utils.seed_everything(seed)
     dataset = get_dataset_fn(args.dataset)(tokenizer)
